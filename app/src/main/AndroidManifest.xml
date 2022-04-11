@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="th.ac.kmutnb.aseancovid_19tracking">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AseanCovid19Tracking">
+        <activity
+            android:name=".CheckRequestPage"
+            android:exported="false" />
+        <activity
+            android:name=".RequestPage"
+            android:exported="false"
+            android:parentActivityName=".UserMainPage"></activity>
+        <activity
+            android:name=".UserMainPage"
+            android:exported="false"
+            android:parentActivityName=".LoginPage"></activity>
+        <activity android:name=".LoginPage">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity android:name=".RegisPage">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity android:name=".OneData">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".DataAll" />
+        </activity>
+        <activity android:name=".DataAll">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
